@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <h1>@Context.Session.GetInt32("NumberSession")</h1>
+    <div>
+        <div>
+            <a asp-controller="Home" asp-action="calculadora" asp-route-valor="sumar" ><button class="btn btn-size btn-warning" >+1</button></a>
+            <a asp-controller="Home" asp-action="calculadora" asp-route-valor="restar" ><button class="btn btn-size btn-primary">-1</button></a>
+            
+        </div>
+        <div>
+            <a asp-controller="Home" asp-action="calculadora" asp-route-valor="multiplicar" ><button class="btn btn-size btn-danger">x2</button></a>
+            <a asp-controller="Home" asp-action="calculadora" asp-route-valor="random" ><button class="btn btn-size btn-success">+Random</button></a>
+        </div>
+    </div>
+    
+    
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
